@@ -1,0 +1,7 @@
+.loading {
+  @apply rounded-full p-2 inline-block bg-black bg-opacity-20;
+}
+
+.spinner {
+  @apply w-7 h-7 border-4 border-white rounded-full animate-spin cursor-wait border-l-transparent;
+}

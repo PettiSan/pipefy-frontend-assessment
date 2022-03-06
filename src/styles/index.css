@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+svg {
+  display: block;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Modal {
+  @apply py-10 lg:py-0 fixed inset-0 bg-black bg-opacity-50 z-[100] flex items-center overflow-auto flex-col;
+}
+
+.Modal__children {
+  @apply flex justify-center flex-1 items-center;
+}
+
+body.ModalOpen {
+  overflow: hidden;
+}

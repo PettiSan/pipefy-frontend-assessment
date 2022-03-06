@@ -1,0 +1,15 @@
+.innerCard {
+  @apply flex flex-col justify-center items-center bg-gray-200 space-y-4 py-10 rounded-xl shadow-md;
+}
+
+.title {
+  @apply text-base text-black font-medium text-center;
+}
+
+.createdAt {
+  @apply text-gray-500 text-sm;
+}
+
+.innerCard a {
+  @apply text-xs text-black underline uppercase;
+}

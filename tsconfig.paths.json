@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@pages/*": ["./pages/*"],
+      "@assets/*": ["./assets/*"],
+      "@icons/*": ["./icons/*"],
+      "@graphql-types/*": ["./__generatedTypes__/*"],
+      "@utils/*": ["./utils/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@graphql/*": ["./graphql/*"],
+      "@template/*": ["./template/*"],
+      "@modal/*": ["./modal/*"]
+    }
+  }
+}

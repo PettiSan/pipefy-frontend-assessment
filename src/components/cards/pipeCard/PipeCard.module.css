@@ -1,0 +1,27 @@
+.pipeCard {
+  @apply flex flex-col justify-between items-center pb-10 pt-4 px-4 space-y-2 h-80 rounded-xl tracking-tight text-center cursor-pointer hover:shadow-md;
+}
+
+.header {
+  @apply flex justify-between w-full;
+}
+
+.pipeCard svg {
+  @apply text-xl hover:scale-110 cursor-pointer;
+}
+
+.starIcon {
+  @apply text-yellow-500;
+}
+
+.lockIcon {
+  @apply text-gray-500;
+}
+
+.pipeCard h3 {
+  @apply text-xl text-black font-bold;
+}
+
+.pipeCard span {
+  @apply text-base text-gray-500;
+}

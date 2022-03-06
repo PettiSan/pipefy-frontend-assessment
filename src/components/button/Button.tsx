@@ -1,0 +1,17 @@
+import React, { ButtonHTMLAttributes, PropsWithChildren } from "react";
+import styles from "./Button.module.css";
+
+type ButtonProps = PropsWithChildren<{
+  onClick: () => void;
+}> &
+  ButtonHTMLAttributes<HTMLButtonElement>;
+
+export function Button(props: ButtonProps) {
+  const { children, ...rest } = props;
+
+  return (
+    <button {...rest} className={styles.button}>
+      {children}
+    </button>
+  );
+}

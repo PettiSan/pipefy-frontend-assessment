@@ -1,0 +1,3 @@
+.innerCardList {
+  @apply flex flex-col space-y-6;
+}

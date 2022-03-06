@@ -1,0 +1,3 @@
+.pipeCardModal {
+  @apply flex flex-col min-w-[20rem] md:w-96;
+}

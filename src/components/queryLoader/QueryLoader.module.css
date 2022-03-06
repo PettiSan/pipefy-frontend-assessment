@@ -1,0 +1,11 @@
+.queryLoader {
+  @apply flex flex-col items-center justify-center p-5 space-y-4 m-auto h-screen w-screen inset-0 fixed backdrop-opacity-10 backdrop-invert bg-white/30 z-10;
+}
+
+.queryLoader_title {
+  @apply font-bold;
+}
+
+.loadingWrapper {
+  @apply backdrop-opacity-10 backdrop-invert bg-white/30 flex items-center justify-center h-screen w-screen inset-0 fixed;
+}

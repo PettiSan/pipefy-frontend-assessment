@@ -1,0 +1,7 @@
+.defaultModalContent {
+  @apply z-[101] flex flex-col relative rounded-2xl bg-gray-100 p-8 max-h-[90vh] overflow-auto;
+}
+
+.button {
+  @apply z-[102] absolute text-black flex items-center justify-center top-3 right-3 text-sm;
+}

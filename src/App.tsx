@@ -1,17 +1,29 @@
-import React from 'react';
-import './App.css';
+import { PipeCardsList } from "@components/cards/pipeCard/pipeCardsList/PipeCardsList";
+import { QueryLoader } from "@components/queryLoader/QueryLoader";
+import { useQueryOrganization } from "@graphql/queries/globalQueries";
+import { TemplateDefault } from "@template/templateDefault/TemplateDefault";
+import React from "react";
 
 function App() {
+  const organizationQuery = useQueryOrganization({
+    variables: {
+      id: process.env.REACT_APP_PIPEFY_ORGANIZATION_ID,
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img
-          src="https://files.readme.io/9e810f9-small-developers3x.png"
-          className="App-logo"
-          alt="logo"
-        />
-      </header>
-    </div>
+    <TemplateDefault seoTitle="Pipes Page">
+      <QueryLoader query={organizationQuery}>
+        {({ data }) => (
+          <section>
+            {data?.organization?.pipes &&
+              data?.organization?.pipes?.length > 0 && (
+                <PipeCardsList items={data?.organization?.pipes} />
+              )}
+          </section>
+        )}
+      </QueryLoader>
+    </TemplateDefault>
   );
 }
 

@@ -1,0 +1,19 @@
+.header {
+  @apply flex flex-col space-y-1 mb-6;
+}
+
+.title {
+  @apply flex items-center space-x-2 text-black;
+}
+
+.header h1 {
+  @apply text-3xl font-bold;
+}
+
+.header svg {
+  @apply text-lg text-gray-500;
+}
+
+.header p {
+  @apply text-base text-gray-500;
+}
