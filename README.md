@@ -1,16 +1,3 @@
-# Huge disclaimer
-
-About the CSS structure, due to a bug between Tailwind and CRA in the latest versions it is not possible to use the postcss-nested plugin.
-
-See more **[here](https://stackoverflow.com/a/70976599)**
-
-| <b>How it's</b> <img src="/src/assets/css-default.jpeg" height="500px" width="100%"> | <b>How should it be</b> <img src="/src/assets/css-formated.jpeg" height="500px" width="100%"> |
-| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
-
-# Firebase Hosting
-
-Firebase Hostring **[URL](https://pipefy-assessment.web.app/)**
-
 # Features
 
 - <b>Firebase Hosting</b> - To live test
@@ -18,6 +5,19 @@ Firebase Hostring **[URL](https://pipefy-assessment.web.app/)**
 - <b>TailwindCSS</b> - As CSS framework
 - <b>React Helmet Async</b> - To handle head meta tags
 - <b>Craco</b> - To overwrite the CRA tsconfig.json and enable paths aliases
+
+# Firebase Hosting
+
+Firebase Hostring **[URL](https://pipefy-assessment.web.app/)**
+
+# CSS Disclaimer
+
+About the CSS structure, due to a bug between Tailwind and CRA in the latest versions it is not possible to use the postcss-nested plugin.
+
+See more **[here](https://stackoverflow.com/a/70976599)**
+
+| <b>How it's</b> <img src="/src/assets/css-default.jpeg" height="500px" width="100%"> | <b>How should it be</b> <img src="/src/assets/css-formated.jpeg" height="500px" width="100%"> |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- |
 
 # App Instructions
 
