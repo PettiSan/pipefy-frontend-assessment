@@ -4,11 +4,11 @@ About the CSS structure, due to a bug between Tailwind and CRA in the latest ver
 
 See more **[here](https://stackoverflow.com/a/70976599)**
 
-How it's
-![image](/src/assets/css-default.jpeg)
+- <b>How it's</b>
+  ![image](/src/assets/css-default.jpeg)
 
-How should it be
-![image](/src/assets/css-formated.jpeg)
+- <b>How should it be</b>
+  ![image](/src/assets/css-formated.jpeg)
 
 # Firebase Hosting
 
