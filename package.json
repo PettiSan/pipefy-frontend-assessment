@@ -25,7 +25,6 @@
     "dev": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "test-watch": "craco test --watch",
     "eject": "react-scripts eject",
     "gql-watch-schema": "apollo codegen:generate --config=apollo.config.js --target=typescript --no-addTypename --watch --outputFlat=src/__generatedTypes__",
     "gql-schema": "apollo codegen:generate --config=apollo.config.js --target=typescript --no-addTypename --outputFlat=src/__generatedTypes__"
