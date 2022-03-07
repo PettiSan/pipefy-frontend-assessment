@@ -1,55 +1,44 @@
-# The Assessment
-This assessment was build to validate your developer skills using our main stack (React + GraphQL). Keep in mind that UI and performance walk together to deliver the best experience.
+# Huge disclaimer
 
-Your main objective is to deliver a list of Pipes (sorted by name), with the number of cards that belong to it. Once the pipes are totally listed, we want to see a small interaction to load some Pipe's cards (paginated following the GraphQL pattern) in a button click, loading more cards at an user's interaction (like a button click). You can load these cards inside a modal, for example.
+About the CSS structure, due to a bug between Tailwind and CRA in the latest versions it is not possible to use the postcss-nested plugin.
 
-You don't need to develop the best layout in this phase. Feel free to create your visual representation of Pipefy or replicate the visual structure that we already have.
+See more **[here](https://stackoverflow.com/a/70976599)**
 
-## Visual Representation
-![image](https://user-images.githubusercontent.com/5097397/127360349-7231b194-0a8c-4c31-af6c-886005bc8d6c.png)
+How it's
+![image](/src/assets/css-default.jpeg)
 
-**OBS: You don't need to develop the favorite and "add new pipe" interactions. Don't worry about the Pipe's icons.**
+How should it be
+![image](/src/assets/css-formated.jpeg)
 
-## What we will evaluate
-- A semantic HTML;
-- A well structured CSS (feel free to use any lib, preprocessor or pure CSS);
-- How clean and readable your code is;
-- Your vision about frontend's architecture;
+# Firebase Hosting
 
-## Bonus
-- TypeScript usage;
-- Unit and/or integration tests;
-- Usage of a state management layer (like Redux, Mobx or even GraphQL cache);
-- Functional programming approach;
+Firebase Hostring **[URL](https://pipefy-assessment.web.app/)**
+
+# Features
+
+- <b>Firebase Hosting</b> - To live test
+- <b>Apollo codegen</b> - To automatically generates GraphQL types
+- <b>TailwindCSS</b> - As CSS framework
+- <b>React Helmet Async</b> - To handle head meta tags
+- <b>Craco</b> - To overwrite the CRA tsconfig.json and enable paths aliases
 
 # App Instructions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this App you will need to create a .env file and add these <b>3</b> variables in it:
 
-To run this App you will need to create a .env file and add these 2 variables in it:
+**OBS: There's a new enviroment variable dependency, REACT_APP_PIPEFY_ORGANIZATION_ID**
 
 ```
 REACT_APP_PIPEFY_API_URL=https://app.pipefy.com/queries
 REACT_APP_PIPEFY_API_TOKEN=<API_TOKEN>
+REACT_APP_PIPEFY_ORGANIZATION_ID=<ORGANIZATION_ID>
 ```
-
-The `API_TOKEN` was sent in the same email that you received with this assessment's link.
-
-## API
-You can access our API documentation with the below link:
-
-[Pipefy's GraphQL Playground](https://app.pipefy.com/graphiql)
-
-## Tips
-1. You can use the `organization` query to load all pipes. The other (cards) query is very simple to find in our documentation;
-2. We already configured Apollo Provider for your;
-3. Use the `@apollo/client` dependency to extract the `useQuery` hook, and the `gql`;  
 
 ## Available Scripts
 
 ### `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode and also gql-watch-schema script.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
@@ -58,7 +47,10 @@ You will also see any lint errors in the console.
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `gql-watch-schema`
+
+Launches the apollo codegen in the watch mode.\
 
 ## Learn More
 
