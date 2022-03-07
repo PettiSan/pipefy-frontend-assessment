@@ -1,7 +1,15 @@
 .defaultModalContent {
-  @apply z-[101] flex flex-col relative rounded-2xl bg-gray-100 p-8 max-h-[90vh] overflow-auto;
+  @apply z-[101] flex flex-col relative rounded-2xl bg-gray-100 p-8 max-h-[90vh] min-h-[14.75rem] overflow-auto md:w-96;
 }
 
 .button {
   @apply z-[102] absolute text-black flex items-center justify-center top-3 right-3 text-sm;
+}
+
+.defaultModalContent::-webkit-scrollbar {
+  @apply bg-transparent w-3 rounded-br-md rounded-tr-md;
+}
+
+.defaultModalContent::-webkit-scrollbar-thumb {
+  @apply bg-[#E0E7F3] rounded-br-md rounded-tr-md border-solid border-l-0 border-r-0 border-b-8 border-t-8 border-gray-100;
 }

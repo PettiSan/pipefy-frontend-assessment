@@ -33,11 +33,26 @@ export interface QCards_cards_edges {
   node: QCards_cards_edges_node | null;
 }
 
+export interface QCards_cards_pageInfo {
+  /**
+   * When paginating forwards, the cursor to continue.
+   */
+  endCursor: string | null;
+  /**
+   * When paginating forwards, are there more items?
+   */
+  hasNextPage: boolean;
+}
+
 export interface QCards_cards {
   /**
    * A list of edges.
    */
   edges: (QCards_cards_edges | null)[] | null;
+  /**
+   * Information to aid in pagination.
+   */
+  pageInfo: QCards_cards_pageInfo;
 }
 
 export interface QCards {
@@ -49,4 +64,6 @@ export interface QCards {
 
 export interface QCardsVariables {
   pipe_id: string;
+  first?: number | null;
+  after?: string | null;
 }

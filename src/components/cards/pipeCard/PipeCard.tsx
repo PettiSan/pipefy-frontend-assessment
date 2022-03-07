@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 import { PipeCardFragment } from "@graphql-types/PipeCardFragment";
-import { LockIcon } from "@icons/LockIcon";
+import { LockLockedIcon } from "@icons/LockLockedIcon";
+import { LockOpenedIcon } from "@icons/LockOpenedIcon";
 import { StarIcon } from "@icons/StarIcon";
 import { getBgColor } from "@utils/getBgColor";
 import clsx from "clsx";
@@ -22,10 +23,20 @@ export function PipeCard(props: PipeCardFragment) {
 
   return (
     <Tilt tiltMaxAngleX={5} tiltMaxAngleY={15}>
-      <article className={clsx(styles.pipeCard, getBgColor(color))}>
+      <article
+        className={clsx(
+          styles.pipeCard,
+          getBgColor(color),
+          !cards_count || cards_count === 0 ? styles.disabled : ""
+        )}
+      >
         <div className={styles.header}>
           <div className={styles.lockIcon}>
-            <LockIcon />
+            {!cards_count || cards_count === 0 ? (
+              <LockLockedIcon />
+            ) : (
+              <LockOpenedIcon />
+            )}
           </div>
 
           <div className={styles.starIcon}>

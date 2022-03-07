@@ -1,6 +1,6 @@
 import React from "react";
 import { BiLockAlt } from "react-icons/bi";
 
-export function LockIcon() {
+export function LockLockedIcon() {
   return <BiLockAlt />;
 }

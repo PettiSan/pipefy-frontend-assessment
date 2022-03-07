@@ -1,13 +1,5 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-
-const fieldMergeList = {
-  keyArgs: (args: any) => {
-    return Object.keys(args as any);
-  },
-  merge(a: any, b: any) {
-    return { ...b, data: a ? [...a.data, ...b.data] : b.data };
-  },
-};
+import { relayStylePagination } from "@apollo/client/utilities";
 
 export const graphqlClient = new ApolloClient({
   uri: process.env.REACT_APP_PIPEFY_API_URL || "",
@@ -15,9 +7,7 @@ export const graphqlClient = new ApolloClient({
     typePolicies: {
       Query: {
         fields: {
-          cards: {
-            ...fieldMergeList,
-          },
+          cards: relayStylePagination(["pipe_id"]),
         },
       },
     },

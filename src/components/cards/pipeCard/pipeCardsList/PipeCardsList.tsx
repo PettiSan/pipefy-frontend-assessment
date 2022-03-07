@@ -29,6 +29,8 @@ export function PipeCardsList(props: PipeCardsListProps) {
               <li key={item.id}>
                 <button
                   onClick={() => {
+                    if (item.cards_count === 0) return false;
+
                     setSelectedPipeId(item.id);
                     pipeCardModal.open();
                   }}

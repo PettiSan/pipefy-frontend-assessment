@@ -24,9 +24,13 @@ export function useQueryOrganization(
 }
 
 export const Q_CARDS = gql`
-  query QCards($pipe_id: ID!, $first: Int) {
-    cards(pipe_id: $pipe_id, first: $first) {
+  query QCards($pipe_id: ID!, $first: Int, $after: String) {
+    cards(pipe_id: $pipe_id, first: $first, after: $after) {
       ...InnerCardFragment
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
     }
   }
   ${innerCardFragment}
