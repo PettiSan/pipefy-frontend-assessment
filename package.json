@@ -25,6 +25,7 @@
     "dev": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "test-watch": "craco test --watch",
     "eject": "react-scripts eject",
     "gql-watch-schema": "apollo codegen:generate --config=apollo.config.js --target=typescript --no-addTypename --watch --outputFlat=src/__generatedTypes__",
     "gql-schema": "apollo codegen:generate --config=apollo.config.js --target=typescript --no-addTypename --outputFlat=src/__generatedTypes__"
@@ -50,8 +51,10 @@
   "devDependencies": {
     "@types/autoprefixer": "^10.2.0",
     "@types/concurrently": "^7.0.0",
+    "@types/enzyme": "^3.10.11",
     "@types/react": "^17.0.11",
     "@types/react-helmet": "^6.1.5",
+    "@types/react-test-renderer": "^17.0.1",
     "@types/tailwindcss": "^3.0.9",
     "autoprefixer": "^10.4.2",
     "clsx": "^1.1.1",
@@ -59,9 +62,11 @@
     "craco": "0.0.3",
     "craco-alias": "^3.0.1",
     "dayjs": "^1.10.8",
+    "enzyme": "^3.11.0",
     "postcss": "^8.4.7",
     "react-helmet-async": "^1.2.3",
     "react-parallax-tilt": "^1.6.3",
+    "react-test-renderer": "^17.0.2",
     "tailwindcss": "^3.0.23"
   }
 }
