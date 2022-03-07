@@ -1,9 +1,7 @@
 import React, { ButtonHTMLAttributes, PropsWithChildren } from "react";
 import styles from "./Button.module.css";
 
-type ButtonProps = PropsWithChildren<{
-  onClick: () => void;
-}> &
+type ButtonProps = PropsWithChildren<{}> &
   ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function Button(props: ButtonProps) {

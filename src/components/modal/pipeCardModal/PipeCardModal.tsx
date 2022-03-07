@@ -1,7 +1,7 @@
 import { Button } from "@components/button/Button";
 import { InnerCardList } from "@components/cards/innerCard/innerCardList/InnerCardList";
 import { QueryLoader } from "@components/queryLoader/QueryLoader";
-import { useQueryCards } from "@graphql/queries/globalQueries";
+import { useQueryCards } from "@graphql/queries/cardsQuery";
 import React from "react";
 import { DefaultModalContent } from "../DefaultModalContent";
 import styles from "./PipeCardModal.module.css";

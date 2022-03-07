@@ -2,7 +2,7 @@ import { ApolloProvider } from "@apollo/client";
 import { MockedProvider, MockedResponse } from "@apollo/client/testing";
 import { PipeCardsList } from "@components/cards/pipeCard/pipeCardsList/PipeCardsList";
 import { graphqlClient } from "@graphql/client";
-import { Q_ORGANIZATION } from "@graphql/queries/globalQueries";
+import { Q_ORGANIZATION } from "@graphql/queries/organizationQuery";
 import { waitFor } from "@testing-library/react";
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";

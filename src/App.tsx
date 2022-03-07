@@ -1,6 +1,6 @@
 import { PipeCardsList } from "@components/cards/pipeCard/pipeCardsList/PipeCardsList";
 import { QueryLoader } from "@components/queryLoader/QueryLoader";
-import { useQueryOrganization } from "@graphql/queries/globalQueries";
+import { useQueryOrganization } from "@graphql/queries/organizationQuery";
 import { TemplateDefault } from "@template/templateDefault/TemplateDefault";
 import React from "react";
 

@@ -32,25 +32,10 @@ export function QueryLoader<T, V>(props: QueryLoaderProps<T, V>) {
     );
   }
 
-  if (
-    query.error &&
-    query.error.graphQLErrors[0] &&
-    query.error.graphQLErrors[0].extensions &&
-    query.error.graphQLErrors[0].extensions.code === "UNAUTHENTICATED"
-  ) {
-    return (
-      <div className={styles.queryLoader}>
-        <div className={styles.queryLoader_title}>Sessão expirada!</div>
-
-        <ApiFeedback error={query.error} />
-      </div>
-    );
-  }
-
   if (query.error) {
     return (
       <section className={styles.queryLoader}>
-        <div className={styles.queryLoader_title}>Ops!</div>
+        <div className={styles.queryLoader_title}>Ops! Tivemos um problema</div>
 
         <ApiFeedback error={query.error} />
 
